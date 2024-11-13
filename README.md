@@ -120,7 +120,7 @@ These models are loaded at the app startup, and the API provides two main endpoi
     "timestamp": "2024-11-13T12:00:00"
   }
 
-#### 2. Make Predictions
+### 2. Make Predictions
 
 - **Endpoint**: `/predict`
 - **Method**: `POST`
@@ -132,15 +132,14 @@ These models are loaded at the app startup, and the API provides two main endpoi
 
 - **Request Body**: The request body should contain a JSON object with a `features` array, which contains the feature values required for making the prediction. The number of features must match the number expected by the model (6 features for this example).
 
+{
+  "features": [0.5, 1.2, -0.3, 4.5, 8, 2.5]
+}
+  
 **Request Example**:
 
 ```bash
 POST http://127.0.0.1:8000/predict?model=linear_regression
 
-Request Body (JSON):
 
-{
-  "features": [0.5, 1.2, -0.3, 4.5, 8, 2.5]
-}
-  
 
