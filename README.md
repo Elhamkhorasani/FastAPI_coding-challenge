@@ -120,3 +120,16 @@ These models are loaded at the app startup, and the API provides two main endpoi
     "timestamp": "2024-11-13T12:00:00"
   }
 
+### 2. Make Predictions
+
+    - **Endpoint:** /predict
+    - **Method:** POST
+    - **Description:** This endpoint allows users to make predictions using either the Linear Regression or Random Forest model.
+        Query Parameter:
+            model: Specifies which model to use for predictions. Accepts:
+                "linear_regression"
+                "random_forest"
+        Request Body: A JSON object containing a list of features required for prediction.
+
+  
+
