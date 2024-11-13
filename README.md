@@ -5,7 +5,7 @@
 ![Docker](https://img.shields.io/badge/docker-latest-blue.svg)
 
 ## 🎯 Overview
-Technical challenge for Software Engineering candidates focusing on ML model deployment and API development.
+Technical challenge focusing on ML model deployment and API development.
 
 ## 🗂 Project Structure
 
