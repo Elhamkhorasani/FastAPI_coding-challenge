@@ -85,3 +85,38 @@ python -m app.main
     "Weight": "1.37kg",
 }
 ```
+
+
+# FastAPI Prediction API
+
+This repository contains a FastAPI-based web application that serves a **prediction API** using machine learning models (Linear Regression and Random Forest). The application performs predictions based on a set of features provided by the user. The API also includes a health check endpoint to monitor the service's status.
+
+## Features
+
+- **Health Check Endpoint**: To verify if the API is running properly.
+- **Prediction Endpoint**: To get predictions from two machine learning models — Linear Regression and Random Forest.
+  - You can specify which model to use for predictions through the `model` query parameter.
+  - The prediction is made using a set of input features provided in the request body.
+- **Logging**: Logs are created to monitor the status of the models and predictions.
+
+## How It Works
+
+The FastAPI app loads two pre-trained models:
+1. **Linear Regression Model** (`linear_regression_model.pkl`)
+2. **Random Forest Model** (`random_forest_model.pkl`)
+
+These models are loaded at the app startup, and the API provides two main endpoints:
+
+### 1. Health Check
+
+- **Endpoint**: `/health`
+- **Method**: `GET`
+- **Description**: This endpoint checks if the API is running properly.
+  
+  **Response Example**:
+  ```json
+  {
+    "status": "healthy",
+    "timestamp": "2024-11-13T12:00:00"
+  }
+
